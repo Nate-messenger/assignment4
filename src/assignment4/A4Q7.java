@@ -30,12 +30,16 @@ public class A4Q7 {
                 System.out.println("you quit");
                 break;
             }
-            //the roleing of the dice
+            //the rolling of the dice
             if (r >= 2 && r <= 12) {
                 //increases the position of the player
                 p = p + r;
+                if (p > 100) {
+                p = p - r; 
+            }
                 System.out.println("You are at " + p);
             }
+            
             //Snakes
             if (p == 54) {
                 System.out.println("You hit a eel you are now at 19");
@@ -65,6 +69,7 @@ public class A4Q7 {
             if (p == 100) {
                 System.out.println("You win");
             }
+            
         }
 
     }
